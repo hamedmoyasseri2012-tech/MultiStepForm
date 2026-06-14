@@ -1,6 +1,15 @@
-import { useEffect } from "react";
+const Review = ({step,setStep}) => {
+  
+  const handlePrev = () => {
+    if (step === "review") {
+      setStep ("payment")
+    }
+  }
+  const handleSubmit = () => {
+    
+  }
 
-const Review = () => {
+
   return (
     <>
       <div className="flex flex-col gap-8 pl-4">
@@ -16,10 +25,10 @@ const Review = () => {
         </div>
       </div>
       <div>
-        <button className="w-53.25 h-10.75 border rounded-xl bg-[#f7f7f7] border-[#f7f7f7] font-bold text-xl text-[#979797]">
+        <button onClick={handlePrev} className="w-53.25 h-10.75 border rounded-xl bg-[#f7f7f7] border-[#f7f7f7] font-bold text-xl text-[#979797]">
           Previous
         </button>
-        <button className="w-53.25 h-10.75 border rounded-xl border-[#4cb050] text-white font-bold text-xl bg-[#4cb050]">
+        <button onClick={handleSubmit} className="w-53.25 h-10.75 border rounded-xl border-[#4cb050] text-white font-bold text-xl bg-[#4cb050]">
           submit
         </button>
       </div>

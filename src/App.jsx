@@ -12,7 +12,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <ProgressBar />
+      <ProgressBar setStep={setStep} step={step} />
       {step === "createAccount" ? (
         <CreateAccount />
       ) : step === "personalDetails" ? (
@@ -20,7 +20,7 @@ const App = () => {
       ) : step === "payment" ? (
         <Payment />
       ) : step === "review" ? (
-        <Review />
+        <Review setStep={setStep} step={step} />
       ) : null}
 
       <Footer setStep={setStep} step={step} />
