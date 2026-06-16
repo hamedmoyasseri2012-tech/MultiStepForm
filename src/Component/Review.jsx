@@ -1,14 +1,9 @@
-const Review = ({step,setStep}) => {
-  
+const Review = ({ step, setStep }) => {
   const handlePrev = () => {
     if (step === "review") {
-      setStep ("payment")
+      setStep("payment");
     }
-  }
-  const handleSubmit = () => {
-    
-  }
-
+  };
 
   return (
     <>
@@ -25,10 +20,19 @@ const Review = ({step,setStep}) => {
         </div>
       </div>
       <div>
-        <button onClick={handlePrev} className="w-53.25 h-10.75 border rounded-xl bg-[#f7f7f7] border-[#f7f7f7] font-bold text-xl text-[#979797]">
+        <button
+          onClick={handlePrev}
+          className="w-53.25 h-10.75 border rounded-xl bg-[#f7f7f7] border-[#f7f7f7] font-bold text-xl text-[#979797]"
+        >
           Previous
         </button>
-        <button onClick={handleSubmit} className="w-53.25 h-10.75 border rounded-xl border-[#4cb050] text-white font-bold text-xl bg-[#4cb050]">
+        <button
+          onClick={() => {
+            alert("Form submitted successfully! 🎉");
+            window.location.reload();
+          }}
+          className="w-53.25 h-10.75 border rounded-xl border-[#4cb050] text-white font-bold text-xl bg-[#4cb050]"
+        >
           submit
         </button>
       </div>
