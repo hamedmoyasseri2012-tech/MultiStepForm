@@ -1,9 +1,4 @@
 const ProgressBar = ({ step, setStep }) => {
-  if (step=== "createAccount")
-    setStep ()
-
-  };
-
   return (
     <>
       <div
